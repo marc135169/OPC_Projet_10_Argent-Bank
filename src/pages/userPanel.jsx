@@ -90,9 +90,9 @@ export default function UserPanel() {
                     }
                 </section>
                 <section className="informationPanel flex flex-col mt-20 w-full items-center justify-center gap-10">
-                    <AccountBalance multi="8349" money="2,082.79" balance="Available"/>
-                    <AccountBalance multi="6712" money="10,928.42" balance="Available"/>
-                    <AccountBalance multi="8349" money="184.30" balance="Current"/>
+                    <AccountBalance multi={8349} money={2082.79} balance="Available"/>
+                    <AccountBalance multi={6712} money={10928.42} balance="Available"/>
+                    <AccountBalance multi={8349} money={184.30} balance="Current"/>
                 </section>
             </main>
         </>

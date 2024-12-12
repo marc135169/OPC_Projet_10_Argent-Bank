@@ -5,6 +5,7 @@ import App from './App.jsx'
 import Home from "./pages/home.jsx";
 import Login from "./pages/login.jsx";
 import UserPanel from "./pages/userPanel.jsx";
+import 'react-toastify/dist/ReactToastify.css'
 
 const router = createBrowserRouter([
     {

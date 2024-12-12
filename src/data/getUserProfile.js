@@ -8,8 +8,7 @@ export const fetchUserProfile = async () => {
                 'Content-Type': 'application/json',
                 'Authorization': `Bearer ${token}`,
             },
-        })
-
+        })        
         return await response.json()
 
     } catch (error) {

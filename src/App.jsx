@@ -5,16 +5,21 @@ import {Provider} from "react-redux";
 import store from "./redux/store.js";
 import {useEffect} from "react";
 import {fetchUserProfile} from "./data/getUserProfile.js";
+import {ToastContainer} from "react-toastify";
 
 export default function App() {
+    
     useEffect(() => {
         fetchUserProfile()
-    }, []);
+    }, []);       
+    
     return (
+        
         <Provider store={store}>
-            <Navbar/>                           
+            <Navbar/>            
             <Outlet/>            
-            <Footer/>            
+            <Footer/>
+            <ToastContainer />
         </Provider>
     )
 }

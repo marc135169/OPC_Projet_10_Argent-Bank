@@ -5,6 +5,8 @@ import {useNavigate} from "react-router-dom";
 import {setDataProfile, setToken} from "../redux/authSlice.js";
 import {fetchUserProfile} from "../data/getUserProfile.js";
 import {useState} from "react";
+import {toast} from "react-toastify";
+
 
 
 export default function AuthForm() {
@@ -16,7 +18,7 @@ export default function AuthForm() {
     const handleChange = (e) => {
         const {name, value} = e.target;
         dispatch(updateField({name, value}));
-    };
+    };    
 
     const handleSubmit = async (e) => {
         e.preventDefault();
@@ -26,24 +28,44 @@ export default function AuthForm() {
             
             if(response.message && response.status !== 200){
                 setErrorMessage(response.message);
-            }                
+                toast.error(`${response.message}`,{
+                    position: "top-right",
+                    autoClose: 5000,
+                    hideProgressBar: false,
+                    closeOnClick: true,
+                    pauseOnHover: true,
+                    draggable: true,
+                    progress: undefined,
+                    theme: "colored",
+                });
+            }
             else{
                 sessionStorage.setItem('token', response.body.token);
                 const dataProfile =  await fetchUserProfile()
                 dispatch(setDataProfile(dataProfile));
                 dispatch(setToken(response.body.token));
+                toast.success(`${response.message}`,{
+                    position: "top-right",
+                    autoClose: 5000,
+                    hideProgressBar: false,
+                    closeOnClick: true,
+                    pauseOnHover: true,
+                    draggable: true,
+                    progress: undefined,
+                    theme: "colored",                    
+                });
                 navigate('/user-panel');   
             }            
             
         } catch (error) {
-            console.error('Erreur de connexion sex:', error);            
+            console.error('Erreur de connexion', error);            
         }
         dispatch(resetForm());        
     };
 
     return (
-        <>
-            <main className="authMain w-[100%] h-[85vh] flex flex-col items-center bg-[#12002b]">
+        <>            
+            <main className="authMain w-[100%] h-[85vh] flex flex-col items-center bg-[#12002b]">                
                 <div
                     className="authDiv flex flex-col items-center justify-start p-8 bg-white mt-12 mx-auto w-[300px] h-[385px]">
                     <div className="authHeader flex flex-col items-center justify-center">
@@ -85,8 +107,8 @@ export default function AuthForm() {
                     </form>
                 </div>
                 <div>
-                    <p className="Error text-red-700 font-bold mt-5">{errorMessage}</p>
-                </div>
+                    <p className="Error text-red-700 font-bold mt-5">{errorMessage}</p>                                       
+                </div>                
             </main>
         </>
     );
