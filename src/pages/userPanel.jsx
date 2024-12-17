@@ -1,5 +1,5 @@
 import {useDispatch, useSelector} from "react-redux";
-import {useState} from "react";
+import {useEffect, useState} from "react";
 import {useNavigate} from "react-router-dom";
 import {changeUserName} from "../data/changeUserName.js";
 import {setDataProfile} from "../redux/authSlice.js";
@@ -15,6 +15,12 @@ export default function UserPanel() {
     const navigate = useNavigate();
     const [newUserName, setUserName] = useState(userName);
     const dispatch = useDispatch();
+
+    useEffect(() => {
+        if (!isAuthenticated) {
+            navigate("/login");
+        }
+    }, [isAuthenticated, navigate]);
     
     const handleEditMode = () => {
         if (isAuthenticated) {            
@@ -47,7 +53,6 @@ export default function UserPanel() {
     const handleUserNameChange = (e) => {
         setUserName(e.target.value);
     };
-    
     
     return (
         <>
