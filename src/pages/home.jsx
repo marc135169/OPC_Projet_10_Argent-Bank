@@ -1,3 +1,5 @@
+import HomeArticle from "../components/homeArticle.jsx";
+
 export default function Home() {
 
     return (
@@ -16,43 +18,16 @@ export default function Home() {
                     </section>
                 </div>
                 <section className="features flex flex-col items-center justify-center
-                md:flex-row">
+                md:flex-row">                    
                     <h2 className="sr-only">Features</h2>
-                    <div className="feature-item flex flex-1 flex-col items-center justify-center p-[2.5rem] ">
-                        <img src="../../public/img/icon-chat.webp" alt="Chat Icon"
-                             className="feature-icon w-[152px] border-[10px] border-[#00bc77] rounded-full p-4"/>
-                        <h3 className="feature-item-title font-bold text-[1.25rem] mt-5 mb-2 leading-[1.7rem]">You are our
-                            #1 priority </h3>
-                        <p className="leading-[1.2rem] h-16">
-                            Need to talk to a representative? You can get in touch through our
-                            24/7 chat or through a phone call in less than 5 minutes.
-                        </p>
-                    </div>
-                    <div className="feature-item flex flex-1 flex-col items-center justify-center p-[2.5rem] ">
-                        <img
-                            src="../../public/img/icon-money.webp"
-                            alt="Chat Icon"
-                            className="feature-icon w-[152px] border-[10px] border-[#00bc77] rounded-full p-4"
-                        />
-                        <h3 className="feature-item-title font-bold text-[1.25rem] mt-5 mb-2 leading-[1.7rem]">More savings
-                            means higher rates</h3>
-                        <p className="leading-[1.2rem] h-16">
-                            The more you save with us, the higher your interest rate will be!
-                        </p>
-                    </div>
-                    <div className="feature-item flex flex-1 flex-col items-center justify-center p-[2.5rem]">
-                        <img
-                            src="../../public/img/icon-security.webp"
-                            alt="Chat Icon"
-                            className="feature-icon w-[152px] border-[10px] border-[#00bc77] rounded-full p-4"
-                        />
-                        <h3 className="feature-item-title font-bold text-[1.25rem] mt-5 mb-2 leading-[1.7rem]">Security you
-                            can trust</h3>
-                        <p className="leading-[1.2rem] h-16">
-                            We use top of the line encryption to make sure your data and money
-                            is always safe.
-                        </p>
-                    </div>
+                    <HomeArticle title="You are our
+                            #1 priority" img="../../public/img/icon-chat.webp" description="Need to talk to a representative? You can get in touch through our
+                            24/7 chat or through a phone call in less than 5 minutes."/>
+                    <HomeArticle title="More savings
+                            means higher rates" img="../../public/img/icon-money.webp" description="The more you save with us, the higher your interest rate will be!"/>
+                    <HomeArticle title="Security you
+                            can trust" img="../../public/img/icon-security.webp" description="We use top of the line encryption to make sure your data and money
+                            is always safe."/>
                 </section>
             </main>
         </>

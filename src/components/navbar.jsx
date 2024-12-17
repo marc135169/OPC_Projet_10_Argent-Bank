@@ -17,14 +17,13 @@ export default function Navbar() {
             dispatch(clearDataProfile())
             sessionStorage.removeItem('token');
         }
-    }
-    
+    }    
     return (
         <nav className="main-nav flex flex-row justify-between items-center py-[5px] px-5">
             <Link className="main-nav-logo" to="/">
                 <img
                     className="main-nav-logo-image w-[200px]"
-                    src="../../public/img/argentBankLogo.webp"
+                    src="../../img/argentBankLogo.webp"
                     alt="Argent Bank Logo"
                 />
                 <h1 className="sr-only">Argent Bank</h1>
