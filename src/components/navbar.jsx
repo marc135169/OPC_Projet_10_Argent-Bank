@@ -24,7 +24,7 @@ export default function Navbar() {
             <Link className="main-nav-logo" to="/">
                 <img
                     className="main-nav-logo-image w-[200px]"
-                    src="../../public/img/argentBankLogo.png"
+                    src="../../public/img/argentBankLogo.webp"
                     alt="Argent Bank Logo"
                 />
                 <h1 className="sr-only">Argent Bank</h1>
@@ -33,7 +33,7 @@ export default function Navbar() {
                 {isAuthenticated && (
                 <>
                     <Link to={"/user-panel"} className="flex items-center">
-                    <img className="w-5 h-5 mr-1" src="../../public/img/userIcon.png" alt="user Icon"></img>
+                    <img className="w-5 h-5 mr-1" src="../../public/img/userIcon.webp" alt="user Icon"></img>
                     <div className="mr-6 font-bold hover:underline">{dataProfile ? dataProfile.body.firstName : ''}</div>
                     </Link>
                     <Link to={"/"} className="flex items-center" onClick={logInLogOut}>

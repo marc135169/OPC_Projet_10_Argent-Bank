@@ -69,7 +69,7 @@ export default function AuthForm() {
                 <div
                     className="authDiv flex flex-col items-center justify-start p-8 bg-white mt-12 mx-auto w-[300px] h-[385px]">
                     <div className="authHeader flex flex-col items-center justify-center">
-                        <img src="../../public/img/userIcon.png" alt="user Icon"/>
+                        <img src="../../public/img/userIcon.webp" alt="user Icon"/>
                         <h1 className="text-[24px] font-bold my-[1.25rem]">Sign In</h1>
                     </div>
                     <form onSubmit={handleSubmit} className="authForm flex flex-col items-center justify-center gap-5">

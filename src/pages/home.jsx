@@ -19,7 +19,7 @@ export default function Home() {
                 md:flex-row">
                     <h2 className="sr-only">Features</h2>
                     <div className="feature-item flex flex-1 flex-col items-center justify-center p-[2.5rem] ">
-                        <img src="../../public/img/icon-chat.png" alt="Chat Icon"
+                        <img src="../../public/img/icon-chat.webp" alt="Chat Icon"
                              className="feature-icon w-[152px] border-[10px] border-[#00bc77] rounded-full p-4"/>
                         <h3 className="feature-item-title font-bold text-[1.25rem] mt-5 mb-2 leading-[1.7rem]">You are our
                             #1 priority </h3>
@@ -30,7 +30,7 @@ export default function Home() {
                     </div>
                     <div className="feature-item flex flex-1 flex-col items-center justify-center p-[2.5rem] ">
                         <img
-                            src="../../public/img/icon-money.png"
+                            src="../../public/img/icon-money.webp"
                             alt="Chat Icon"
                             className="feature-icon w-[152px] border-[10px] border-[#00bc77] rounded-full p-4"
                         />
@@ -42,7 +42,7 @@ export default function Home() {
                     </div>
                     <div className="feature-item flex flex-1 flex-col items-center justify-center p-[2.5rem]">
                         <img
-                            src="../../public/img/icon-security.png"
+                            src="../../public/img/icon-security.webp"
                             alt="Chat Icon"
                             className="feature-icon w-[152px] border-[10px] border-[#00bc77] rounded-full p-4"
                         />
