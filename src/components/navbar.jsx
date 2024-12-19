@@ -33,7 +33,7 @@ export default function Navbar() {
                 <>
                     <Link to={"/user-panel"} className="flex items-center">
                     <img className="w-5 h-5 mr-1" src="../../public/img/userIcon.webp" alt="user Icon"></img>
-                    <div className="mr-6 font-bold hover:underline">{dataProfile ? dataProfile.body.firstName : ''}</div>
+                    <div className="mr-6 font-bold hover:underline">{dataProfile ? dataProfile.body.userName : ''}</div>
                     </Link>
                     <Link to={"/"} className="flex items-center" onClick={logInLogOut}>
                         <i className="fa fa-sign-out mr-2"></i>
